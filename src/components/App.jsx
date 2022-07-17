@@ -3,12 +3,11 @@ import TimersList from "./TimersList/TimersList";
 import { useDispatch, useSelector } from 'react-redux/es/exports';
 import { changeTimer, startTimer, stopTimer } from 'redux/slice';
 import { getTimers } from 'redux/selectors';
-// import { useEffect } from "react";
 
 export const App = () => {
 
   const dispatch = useDispatch();
-    // const timers = useSelector(getTimers);
+    const timers = useSelector(getTimers);
 
   
 const start = ({ id, intervalId, time }) => {
