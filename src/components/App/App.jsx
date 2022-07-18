@@ -7,7 +7,6 @@ import s from './App.module.css';
 export const App = () => {
 
   const dispatch = useDispatch();
-
   
 const start = ({ id, intervalId, time }) => {
     const localTime = Number(time.secs) * 1000 + Number(time.mins) * 60 * 1000 + Number(time.hours) * 60 * 60 * 1000;
@@ -42,8 +41,8 @@ const start = ({ id, intervalId, time }) => {
     const secs = pad(Math.floor((time % (1000 * 60)) / 1000));
 
     return { hours, mins, secs };
-      };
-
+  };
+  
   return (
     <div className={s.container}>   
       <h1 className={s.title}>tracker</h1>

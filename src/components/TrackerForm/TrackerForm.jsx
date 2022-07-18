@@ -13,7 +13,7 @@ const TrackerForm = () => {
   const handleSubmit = ({ trackerName }, { resetForm }) => {
    
     if (!trackerName) {
-      dispatch(addTimer(moment(Date.now()).format('LL')));
+      dispatch(addTimer(moment(Date.now()).format()));
       return;
     }
     dispatch(addTimer(trackerName));
