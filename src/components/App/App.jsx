@@ -1,7 +1,8 @@
-import TrackerForm from "./TrackerForm/TrackerForm";
-import TimersList from "./TimersList/TimersList";
+import TrackerForm from "../TrackerForm/TrackerForm";
+import TimersList from "../TimersList/TimersList";
 import { useDispatch } from 'react-redux/es/exports';
 import { changeTimer, startTimer, stopTimer } from 'redux/slice';
+import s from './App.module.css';
 
 export const App = () => {
 
@@ -44,17 +45,8 @@ const start = ({ id, intervalId, time }) => {
       };
 
   return (
-    <div
-      style={{
-        height: '100vh',
-        width: '560px',
-        textAlign: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >   
-      <h1>tracker</h1>
+    <div className={s.container}>   
+      <h1 className={s.title}>tracker</h1>
       <TrackerForm />
       <TimersList stop={stop} start={start} />
     </div>    

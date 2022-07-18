@@ -1,6 +1,8 @@
 import { Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
 import { addTimer } from "redux/slice";
+import { AiOutlineCaretRight } from "react-icons/ai";
+import s from './TrackerForm.module.css';
 
 import moment from "moment";
 
@@ -21,11 +23,11 @@ const TrackerForm = () => {
 
   return (
       <Formik initialValues={{trackerName: ''}} onSubmit={handleSubmit}>
-          <Form>
+          <Form className={s.form}>
         <label>
-          <Field type="text" name="trackerName"/>
+          <Field type="text" name="trackerName" className={s.input} />
         </label>
-        <button type="submit">Enter</button>
+        <button type="submit" className={s.btn}><AiOutlineCaretRight color="white" className={s.icon} /></button>
       </Form>
       </Formik>
 )
