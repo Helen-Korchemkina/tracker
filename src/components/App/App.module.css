@@ -1,29 +1,24 @@
 .container {
-    height: 100vh;
-    min-width: 320px;
-    margin: 100px auto;
-    padding: 20px 40px;
-    border: 2px solid darkgreen;
-    border-radius: 20px;
-    box-shadow: 3px 3px 5px darkgreen;
-    font-size: 40px;
-    color: black;
+  height: 100vh;
+  min-width: 320px;
+  margin: 100px auto;
+  padding: 20px 40px;
+  border: 2px solid darkgreen;
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px darkgreen;
+  font-size: 40px;
+  color: black;
 }
 @media screen and (min-width: 320px) and (max-width: 559px) {
-.container {
-        max-width: 560px;
-
-    }
+  .container {
+    max-width: 560px;
+  }
 }
 @media (min-width: 560px) {
-.container {
-width: 560px;
-}
+  .container {
+    width: 560px;
+  }
 }
 .title {
-    text-align: center;
+  text-align: center;
 }
-
-/* 
-верстка должна быть адаптивной: от 320рх до 560рх — мобильная версия с резиновым контейнером,
-560рх и больше — десктопная с фиксированной шириной контейнера 560рх; */

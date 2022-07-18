@@ -16,7 +16,7 @@ const trackerSlice = createSlice({
           hours: '00',
           mins: '00',
           secs: '00',
-          },
+        },
         intervalId: null,
       });
     },
@@ -34,25 +34,23 @@ const trackerSlice = createSlice({
     },
     startTimer(state, action) {
       state.timers.map(timer => {
-          if (timer.id === action.payload.id) {
+        if (timer.id === action.payload.id) {
           return (
             (timer.time.hours = action.payload.hours),
             (timer.time.mins = action.payload.mins),
-              (timer.time.secs = action.payload.secs),
-              (timer.intervalId = action.payload.intervalId)
+            (timer.time.secs = action.payload.secs),
+            (timer.intervalId = action.payload.intervalId)
           );
         } else {
           return timer;
         }
       });
-      },
-      stopTimer(state, action) {
-       state.timers.map(timer =>
-        timer.id === action.payload
-          ? (timer.intervalId = null)
-          : timer
-      );       
-    }
+    },
+    stopTimer(state, action) {
+      state.timers.map(timer =>
+        timer.id === action.payload ? (timer.intervalId = null) : timer
+      );
+    },
   },
 });
 
